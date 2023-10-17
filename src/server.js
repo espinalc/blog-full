@@ -13,9 +13,6 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
-
-
 const credentials = JSON.parse(
     fs.readFileSync('./credentials.json')
 );
@@ -30,7 +27,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../dist')));
 
 app.use(cors( {
-    origin:'http://localhost:5000',
+    origin:'https://blog-full.vercel.app',
 }));
 
 // Añadido para subida para redireccionar:
